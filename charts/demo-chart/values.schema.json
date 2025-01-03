@@ -8,21 +8,17 @@
       "title": "appName",
       "type": "string"
     },
-    "environmentVariables": {
-      "additionalProperties": true,
-      "properties": {
-        "OS": {
-          "default": "linux",
-          "required": [],
-          "title": "OS",
-          "type": "string"
-        }
-      },
-      "required": [
-        "OS"
-      ],
-      "title": "environmentVariables",
-      "type": "object"
+    "environmentVars": {
+      "default": "",
+      "required": [],
+      "title": "environmentVars",
+      "type": "null"
+    },
+    "favourite": {
+      "default": false,
+      "required": [],
+      "title": "favourite",
+      "type": "boolean"
     },
     "global": {
       "description": "Global values are values that can be accessed from any chart or subchart by exactly the same name.",
@@ -33,14 +29,21 @@
     "image": {
       "additionalProperties": false,
       "properties": {
+        "name": {
+          "default": "nginx",
+          "required": [],
+          "title": "name",
+          "type": "string"
+        },
         "tag": {
-          "default": "1.0.0",
+          "default": "latest",
           "required": [],
           "title": "tag",
           "type": "string"
         }
       },
       "required": [
+        "name",
         "tag"
       ],
       "title": "image",
@@ -51,13 +54,21 @@
       "required": [],
       "title": "replicas",
       "type": "integer"
+    },
+    "team": {
+      "default": "marketing",
+      "required": [],
+      "title": "team",
+      "type": "string"
     }
   },
   "required": [
-    "replicas",
-    "image",
     "appName",
-    "environmentVariables"
+    "replicas",
+    "team",
+    "favourite",
+    "image",
+    "environmentVars"
   ],
   "type": "object"
 }
