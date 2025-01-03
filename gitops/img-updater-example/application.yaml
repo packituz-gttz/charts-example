@@ -15,8 +15,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: helm-guestbook
-    repoURL: https://github.com/argoproj/argocd-example-apps
+    path: charts/demo-chart/
+    repoURL: https://github.com/packituz-gttz/charts-example
     targetRevision: HEAD
     helm:
       valueFiles:
