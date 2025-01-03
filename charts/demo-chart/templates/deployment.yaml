@@ -17,8 +17,8 @@ spec:
       containers:
         - image: demo:"{{ .Values.image.tag }}"
           name: {{ .Values.appName }}
-          env:
           {{- if ((.Values.envrironmentVariables)) }}
+          env:
           {{- range $key, $value := .Values.envrironmentVariables }}
             - name: {{ $key }}
               value: {{ $value | quote }}
