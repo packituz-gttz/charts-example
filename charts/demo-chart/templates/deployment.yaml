@@ -15,7 +15,7 @@ spec:
         app: {{ .Values.appName }}
     spec:
       containers:
-        - image: "gcr.io/packituz-gttz/demo:{{ .Values.image.tag }}"
+        - image: "ghcr.io/packituz-gttz/demo:{{ .Values.image.tag }}"
           name: {{ .Values.appName }}
           {{- if ((.Values.envrironmentVariables)) }}
           env:

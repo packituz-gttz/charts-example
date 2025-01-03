@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd-image-updater.argoproj.io/image-list: gcr.io/packituz-gttz/demo:*
+    argocd-image-updater.argoproj.io/image-list: ghcr.io/packituz-gttz/demo:*
     argocd-image-updater.argoproj.io/write-back-method: git
     argocd-image-updater.argoproj.io/git-repository: git@github.com:packituz-gttz/charts-example.git
     argocd-image-updater.argoproj.io/git-branch: master
