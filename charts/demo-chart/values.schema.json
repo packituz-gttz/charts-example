@@ -9,10 +9,20 @@
       "type": "string"
     },
     "environmentVariables": {
-      "default": "",
-      "required": [],
+      "additionalProperties": false,
+      "properties": {
+        "OS": {
+          "default": "linux",
+          "required": [],
+          "title": "OS",
+          "type": "string"
+        }
+      },
+      "required": [
+        "OS"
+      ],
       "title": "environmentVariables",
-      "type": "null"
+      "type": "object"
     },
     "global": {
       "description": "Global values are values that can be accessed from any chart or subchart by exactly the same name.",
