@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "appName": {
+      "default": "my-app",
+      "required": [],
+      "title": "appName",
+      "type": "string"
+    },
+    "environmentVariables": {
+      "default": "",
+      "required": [],
+      "title": "environmentVariables",
+      "type": "null"
+    },
+    "global": {
+      "description": "Global values are values that can be accessed from any chart or subchart by exactly the same name.",
+      "required": [],
+      "title": "global",
+      "type": "object"
+    },
+    "image": {
+      "additionalProperties": false,
+      "properties": {
+        "tag": {
+          "default": "1.0.0",
+          "required": [],
+          "title": "tag",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tag"
+      ],
+      "title": "image",
+      "type": "object"
+    },
+    "replicas": {
+      "default": 2,
+      "required": [],
+      "title": "replicas",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "replicas",
+    "image",
+    "appName",
+    "environmentVariables"
+  ],
+  "type": "object"
+}

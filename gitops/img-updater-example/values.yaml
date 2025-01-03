@@ -1,0 +1,3 @@
+appName: demo-app
+environmentVariables:
+  OS: Linux

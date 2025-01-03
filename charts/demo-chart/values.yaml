@@ -1,0 +1,5 @@
+replicas: 2
+image:
+  tag: 1.0.0
+appName: my-app
+environmentVariables:
