@@ -46,8 +46,7 @@
   "required": [
     "replicas",
     "image",
-    "appName",
-    "environmentVariables"
+    "appName"
   ],
   "type": "object"
 }
