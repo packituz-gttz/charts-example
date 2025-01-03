@@ -15,7 +15,7 @@ spec:
         app: {{ .Values.appName }}
     spec:
       containers:
-        - image: demo:"{{ .Values.image.tag }}"
+        - image: "demo:{{ .Values.image.tag }}"
           name: {{ .Values.appName }}
           {{- if ((.Values.envrironmentVariables)) }}
           env:

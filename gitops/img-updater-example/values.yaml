@@ -1,3 +1,4 @@
 appName: demo-app
+replicas: 5
 environmentVariables:
   OS: Linux
