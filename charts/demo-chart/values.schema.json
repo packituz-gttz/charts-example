@@ -9,7 +9,7 @@
       "type": "string"
     },
     "environmentVariables": {
-      "default": null,
+      "default": {},
       "required": [],
       "title": "environmentVariables",
       "type": "object"
